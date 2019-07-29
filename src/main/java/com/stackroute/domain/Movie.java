@@ -1,21 +1,19 @@
 package com.stackroute.domain;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
-@Component("movieBean")
-@Scope("prototype")
-public class Movie  {
-    @Autowired
-    @Qualifier("actor1")
+
+public class Movie {
+
     private Actor actor;
 
-    public Movie() {
+
+    public Actor getActor() {
+        return actor;
     }
 
-    public Movie(Actor actor) {
+    @Autowired
+    public void setActor(Actor actor) {
         this.actor = actor;
     }
 
@@ -25,6 +23,4 @@ public class Movie  {
                 "actor=" + actor +
                 '}';
     }
-
-
 }

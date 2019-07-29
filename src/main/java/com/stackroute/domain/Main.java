@@ -1,20 +1,26 @@
 package com.stackroute.domain;
-
+import com.stackroute.domain.Actor;
+import com.stackroute.domain.Movie;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-public class Main {
-    public static void main(String[] args) {
 
-        // using ApplicationContext
-        ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfiguration.class);
-        Movie movie1 = (Movie) context.getBean("movieBean", Movie.class);
-        Movie movie2 = (Movie) context.getBean("movieBean",Movie.class);
-        System.out.println(movie1==movie2);
-        Actor actor1=(Actor)context.getBean("actor1");
-        Actor actor2=(Actor)context.getBean("actor2");
-        Actor actor3=(Actor)context.getBean("actor3");
-        System.out.println(actor1);
-        System.out.println(actor2);
-        System.out.println(actor3);
+
+
+public class Main
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        Actor actorRef1 = context.getBean("actor1",Actor.class);
+        System.out.println(actorRef1.toString());
+
+
+        Movie movieRef1 = context.getBean("movie1",Movie.class);
+        System.out.println(movieRef1.toString());
+
+
+
+
     }
 }

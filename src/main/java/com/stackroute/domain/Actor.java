@@ -10,17 +10,6 @@ public class Actor {
         this.age = age;
     }
 
-    public void setActorName(String actorName) {
-        this.actorName = actorName;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     @Override
     public String toString() {

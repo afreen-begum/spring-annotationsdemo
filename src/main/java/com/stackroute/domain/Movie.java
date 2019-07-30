@@ -8,21 +8,21 @@ import org.springframework.context.ApplicationContextAware;
 
 public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware {
 
-    Actor actor1, actor2, actor3;
+    //    Actor actor1, actor2, actor3;
     ApplicationContext applicationContext;
     BeanFactory beanFactory;
 
-    public void setActor1(Actor actor1) {
-        this.actor1 = actor1;
-    }
-
-    public void setActor2(Actor actor2) {
-        this.actor2 = actor2;
-    }
-
-    public void setActor3(Actor actor3) {
-        this.actor3 = actor3;
-    }
+//    public void setActor1(Actor actor1) {
+//        this.actor1 = actor1;
+//    }
+//
+//    public void setActor2(Actor actor2) {
+//        this.actor2 = actor2;
+//    }
+//
+//    public void setActor3(Actor actor3) {
+//        this.actor3 = actor3;
+//    }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
@@ -47,14 +47,14 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
 
     }
 
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "actor1=" + actor1 +
-                ", actor2=" + actor2 +
-                ", actor3=" + actor3 +
-                ", applicationContext=" + applicationContext +
-                ", beanFactory=" + beanFactory +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Movie{" +
+//                "actor1=" + actor1 +
+//                ", actor2=" + actor2 +
+//                ", actor3=" + actor3 +
+//                ", applicationContext=" + applicationContext +
+//                ", beanFactory=" + beanFactory +
+//                '}';
+//    }
 }

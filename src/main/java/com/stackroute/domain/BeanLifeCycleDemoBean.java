@@ -2,10 +2,7 @@ package com.stackroute.domain;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-
-class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
+public class BeanLifeCycleDemoBean implements InitializingBean, DisposableBean {
 
     String message;
 
@@ -18,13 +15,12 @@ class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
     }
 
 
-    @PostConstruct
+
     public void customInit(){
 
         System.out.println("running customInit method");
     }
 
-    @PreDestroy
     public void customDestroy(){
 
         System.out.println("running customDestroy method");

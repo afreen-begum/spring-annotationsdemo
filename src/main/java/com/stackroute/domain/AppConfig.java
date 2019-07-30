@@ -19,15 +19,15 @@ public class AppConfig {
     @Bean(name = "actor2")
     public Actor getActor2(){
 
-        actor2 = new Actor("Vijay","male",37);
-        return actor1;
+        actor2 = new Actor("Shakti","male",37);
+        return actor2;
     }
 
     @Bean(name = "actor3")
     public Actor getActor3(){
 
         actor3 = new Actor("Rani","female",32);
-        return actor1;
+        return actor3;
     }
 
 
@@ -39,18 +39,17 @@ public class AppConfig {
         movie1.setActor2(actor2);
         movie1.setActor3(actor3);
 
+
         return movie1;
     }
 
-    @Bean(name = "movie2")
-    public Movie getMovie2(){
-        Movie movie2 = new Movie();
 
-        movie2.setActor1(actor1);
-        movie2.setActor2(actor2);
-        movie2.setActor3(actor3);
+    @Bean(name = "beanLifeCycleDemoBean")
+    public BeanLifecycleDemoBean getBeanLife(){
 
-        return movie2;
+        BeanLifecycleDemoBean beanLifeCycleDemoBean = new BeanLifecycleDemoBean();
+        beanLifeCycleDemoBean.setMessage("Hello world, Welcome to programming");
+        return beanLifeCycleDemoBean;
     }
 
 
